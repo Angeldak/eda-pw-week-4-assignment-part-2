@@ -10,12 +10,15 @@
 }
 
 .info {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     background-color: lightskyblue;
     color: blue;
     padding: 2px;
     width: 50%;
     text-align: center;
-    border: solid 2px black;
+    border: solid 2px blue;
 }
 
 .bottomInfo {
@@ -31,11 +34,55 @@ img {
 
 .noneStyle:hover {
     color: red;
-    transition: color 1000ms;
+    transition: color 500ms;
 }
 
-img:hover {
+.wrapper:hover img {
     opacity: 50%;
 }
 
-.imgCover {}
+.wrapper {
+    position: relative;
+    margin: 1em;
+    width: 559px;
+    height: 305px;
+}
+
+.wrapper::after {
+    position: absolute;
+    content: '';
+    top: 1.25rem;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    left: 1.25rem;
+}
+
+.wrapper::before {
+    position: absolute;
+    content: '';
+    top: 1.25rem;
+    bottom: 1.25rem;
+    right: 1.25rem;
+    left: 1.25rem;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+    border: 2px solid white;
+}
+
+.wrapper:hover::before {
+    transform: scale(1, 1);
+}
+
+.buickFont {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5REM;
+    width: 100%;
+    opacity: 0%;
+}
+
+.wrapper:hover .buickFont {
+    opacity: 100%;
+}
