@@ -1,0 +1,41 @@
+.headerStyle {
+    background-color: blue;
+    color: white;
+    padding: 2px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.info {
+    background-color: lightskyblue;
+    color: blue;
+    padding: 2px;
+    width: 50%;
+    text-align: center;
+    border: solid 2px black;
+}
+
+.bottomInfo {
+    background-color: lightskyblue;
+    color: blue;
+    margin: 0;
+    padding: 2px;
+}
+
+img {
+    margin: 0;
+}
+
+.noneStyle:hover {
+    color: red;
+    transition: color 1000ms;
+}
+
+img:hover {
+    opacity: 50%;
+}
+
+.imgCover {}
