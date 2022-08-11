@@ -1,3 +1,7 @@
+.body {
+    background-color: beige;
+}
+
 .headerStyle {
     background-color: blue;
     color: white;
@@ -23,7 +27,7 @@
 
 .bottomInfo {
     background-color: lightskyblue;
-    color: blue;
+    color: rgb(0, 0, 255);
     margin: 0;
     padding: 2px;
 }
@@ -33,8 +37,17 @@
     transition: color 500ms;
 }
 
-.wrapper:hover img {
-    opacity: 50%;
+.imgCover {
+    position: absolute;
+    margin: 1em;
+    width: 559px;
+    height: 305px;
+    top: -1rem;
+    left: -1rem;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(245, 245, 220, 0);
+    transition: background-color ease-in-out 250ms;
 }
 
 .wrapper {
@@ -44,7 +57,7 @@
     height: 305px;
 }
 
-.wrapper::before {
+.wrapper::after {
     position: absolute;
     content: '';
     top: 1.25rem;
@@ -53,10 +66,10 @@
     left: 1.25rem;
     transform: scale(0, 1);
     transition: transform ease-in-out 250ms;
-    border: 2px solid white;
+    border: 2px solid blue;
 }
 
-.wrapper:hover::before {
+.wrapper:hover::after {
     transform: scale(1, 1);
 }
 
@@ -65,11 +78,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    top: 0;
     font-size: 5REM;
     width: 100%;
-    opacity: 0%;
+    color: rgba(0, 0, 255, 0);
 }
 
 .wrapper:hover .buickFont {
-    opacity: 100%;
+    color: rgba(0, 0, 255, 1);
+}
+
+.wrapper:hover .imgCover {
+    background-color: rgba(245, 245, 220, .5);
 }
